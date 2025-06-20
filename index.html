@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Urutan Ayam Bali - Frozen Food Enak</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Jual urutan ayam Bali dan bakso ayam frozen food enak. Pesan via WhatsApp, ready stock siap kirim.">
+    <meta name="keywords" content="jual urutan ayam bali, bakso ayam, frozen food, makanan beku, sosis ayam">
+    
+    <!-- Mobile Theme Color -->
+    <meta name="theme-color" content="#ff6b35">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#ff6b35',
+                        secondary: '#f7931e',
+                        accent: '#ffcc02',
+                        whatsapp: '#25d366',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* EMBEDDED CSS - In production, use external file */
+        :root {
+          --primary: #ff6b35;
+          --secondary: #f7931e;
+          --accent: #ffcc02;
+          --whatsapp: #25d366;
+          --transition-normal: 0.3s ease;
+        }
+
+        * { box-sizing: border-box; }
+
+        html {
+          scroll-behavior: smooth;
+          font-size: 16px;
+        }
+
+        body {
+          font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+          line-height: 1.6;
+          overflow-x: hidden;
+          -webkit-font-smoothing: antialiased;
+        }
+
+        /* Mobile Menu Styles */
+        .mobile-overlay {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.5);
+          z-index: 2000;
+          opacity: 0;
+          visibility: hidden;
+          transition: all var(--transition-normal);
+        }
+
+        .mobile-overlay.active {
+          opacity: 1;
+          visibility: visible;
+        }
+
+        .mobile-menu {
+          position: fixed;
+          top: 0;
+          right: 0;
+          width: 100%;
+          max-width: 320px;
+          height: 100%;
+          background: white;
+          transform: translateX(100%);
+          transition: transform var(--transition-normal);
+          box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+          z-index: 2001;
+        }
+
+        .mobile-menu.active {
+          transform: translateX(0);
+        }
+
+        .mobile-menu-content {
+          padding: 2rem;
+          height: 100%;
+          overflow-y: auto;
+        }
+
+        .mobile-menu-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 2rem;
+          padding-bottom: 1rem;
+          border-bottom: 1px solid #f1f3f4;
+        }
+
+        .mobile-menu-title {
+          font-size: 1.25rem;
+          font-weight: 700;
+          color: var(--primary);
+        }
+
+        .mobile-menu-close {
+          background: none;
+          border: none;
+          font-size: 1.25rem;
+          color: #6b7280;
+          cursor: pointer;
+          padding: 8px;
+          border-radius: 50%;
+          transition: all 0.15s ease;
+        }
+
+        .mobile-menu-close:hover {
+          color: var(--primary);
+          background: #f8f9fa;
+        }
+
+        .mobile-nav {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+
+        .mobile-nav-link {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          padding: 1rem;
+          color: #111827;
+          text-decoration: none;
+          font-weight: 500;
+          border-radius: 12px;
+          transition: all 0.15s ease;
+        }
+
+        .mobile-nav-link:hover {
+          color: var(--primary);
+          background: #f8f9fa;
+        }
+
+        .mobile-nav-link i {
+          width: 20px;
+          text-align: center;
+        }
+
+        .mobile-nav-whatsapp {
+          background: var(--whatsapp);
+          color: white;
+          margin-top: 1rem;
+        }
+
+        .mobile-nav-whatsapp:hover {
+          background: #22c55e;
+          color: white;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          background: rgba(255, 255, 255, 0.9);
+          backdrop-filter: blur(10px);
+          z-index: 1000;
+          transition: all var(--transition-normal);
+          border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar.scrolled {
+          background: rgba(255, 255, 255, 0.95);
+          box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 1rem;
+        }
+
+        .nav-content {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          height: 4rem;
+        }
+
+        @media (min-width: 1024px) {
+          .nav-content {
+            height: 5rem;
+          }
+        }
+
+        .logo-text {
+          font-size: 1.25rem;
+          font-weight: 800;
+          color: var(--primary);
+        }
+
+        @media (min-width: 768px) {
+          .logo-text {
+            font-size: 1.5rem;
+          }
+        }
+
+        @media (min-width: 1024px) {
+          .logo-text {
+            font-size: 1.875rem;
+          }
+        }
+
+        .nav-desktop {
+          display: none;
+          align-items: center;
+          gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+          .nav-desktop {
+            display: flex;
+          }
+        }
+
+        .nav-link {
+          color: #111827;
+          text-decoration: none;
+          font-weight: 500;
+          padding: 0.5rem 0;
+          position: relative;
+          transition: color 0.15s ease;
+        }
+
+        .nav-link:hover {
+          color: var(--primary);
+        }
+
+        .nav-link::after {
+          content: '';
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background: var(--primary);
+          transition: width var(--transition-normal);
+        }
+
+        .nav-link:hover::after {
+          width: 100%;
+        }
+
+        .nav-whatsapp-btn {
+          background: var(--whatsapp);
+          color: white;
+          padding: 0.5rem 1.5rem;
+          border-radius: 50px;
+          text-decoration: none;
+          font-weight: 600;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          transition: all var(--transition-normal);
+        }
+
+        .nav-whatsapp-btn:hover {
+          background: #22c55e;
+          transform: translateY(-1px);
+        }
+
+        .mobile-menu-button {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          background: none;
+          border: none;
+          cursor: pointer;
+          padding: 8px;
+          transition: all var(--transition-normal);
+        }
+
+        @media (min-width: 768px) {
+          .mobile-menu-button {
+            display: none;
+          }
+        }
+
+        .hamburger-line {
+          width: 24px;
+          height: 2px;
+          background: #111827;
+          transition: all var(--transition-normal);
+          transform-origin: center;
+        }
+
+        .mobile-menu-button.active .hamburger-line:nth-child(1) {
+          transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .mobile-menu-button.active .hamburger-line:nth-child(2) {
+          opacity: 0;
+        }
+
+        .mobile-menu-button.active .hamburger-line:nth-child(3) {
+          transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        /* Hero Styles */
+        .hero {
+          position: relative;
+          min-height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent));
+          overflow: hidden;
+          padding-top: 4rem;
+        }
+
+        .floating-elements {
+          position: absolute;
+          inset: 0;
+          pointer-events: none;
+        }
+
+        .floating-element {
+          position: absolute;
+          font-size: 3rem;
+          opacity: 0.8;
+          animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-element:nth-child(1) {
+          top: 10%;
+          left: 10%;
+        }
+
+        .floating-element:nth-child(2) {
+          top: 60%;
+          right: 15%;
+          font-size: 2.5rem;
+        }
+
+        .floating-element:nth-child(3) {
+          bottom: 25%;
+          left: 15%;
+          font-size: 4rem;
+        }
+
+        @media (max-width: 768px) {
+          .floating-elements {
+            display: none;
+          }
+        }
+
+        .hero-content {
+          text-align: center;
+          color: white;
+          max-width: 64rem;
+          padding: 0 1rem;
+          z-index: 10;
+        }
+
+        .hero-title {
+          margin-bottom: 2rem;
+        }
+
+        .hero-title-main {
+          display: block;
+          font-size: 3rem;
+          font-weight: 800;
+          line-height: 1.1;
+        }
+
+        .hero-title-sub {
+          display: block;
+          font-size: 2.5rem;
+          font-weight: 700;
+          color: #fef3c7;
+          margin-top: 0.5rem;
+        }
+
+        @media (min-width: 640px) {
+          .hero-title-main {
+            font-size: 4rem;
+          }
+          .hero-title-sub {
+            font-size: 3rem;
+          }
+        }
+
+        @media (min-width: 768px) {
+          .hero-title-main {
+            font-size: 5rem;
+          }
+          .hero-title-sub {
+            font-size: 4rem;
+          }
+        }
+
+        @media (min-width: 1024px) {
+          .hero-title-main {
+            font-size: 6rem;
+          }
+          .hero-title-sub {
+            font-size: 5rem;
+          }
+        }
+
+        .hero-description {
+          font-size: 1.125rem;
+          margin-bottom: 3rem;
+          opacity: 0.95;
+          line-height: 1.7;
+          max-width: 48rem;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        @media (min-width: 640px) {
+          .hero-description {
+            font-size: 1.25rem;
+          }
+        }
+
+        @media (min-width: 768px) {
+          .hero-description {
+            font-size: 1.5rem;
+          }
+        }
+
+        .hero-buttons {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          align-items: center;
+        }
+
+        @media (min-width: 640px) {
+          .hero-buttons {
+            flex-direction: row;
+            justify-content: center;
+          }
+        }
+
+        .scroll-indicator {
+          position: absolute;
+          bottom: 2rem;
+          left: 50%;
+          transform: translateX(-50%);
+          color: white;
+          font-size: 1.5rem;
+          opacity: 0.7;
+          animation: bounce 2s infinite;
+        }
+
+        /* Button Styles */
+        .btn {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.75rem;
+          padding: 1rem 2rem;
+          border-radius: 50px;
+          text-decoration: none;
+          font-weight: 600;
+          font-size: 1rem;
+          transition: all var(--transition-normal);
+          border: none;
+          cursor: pointer;
+          position: relative;
+          overflow: hidden;
+          min-width: 200px;
+        }
+
+        @media (min-width: 640px) {
+          .btn {
+            min-width: auto;
+            padding: 1rem 2.5rem;
+            font-size: 1.125rem;
+          }
+        }
+
+        .btn:active {
+          transform: scale(0.98);
+        }
+
+        .btn-whatsapp {
+          background: var(--whatsapp);
+          color: white;
+          box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-whatsapp:hover {
+          background: #22c55e;
+          transform: translateY(-2px);
+          box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-outline {
+          background: rgba(255, 255, 255, 0.2);
+          color: white;
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-outline:hover {
+          background: rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-primary {
+          background: var(--primary);
+          color: white;
+        }
+
+        .btn-primary:hover {
+          background: #e85d2b;
+        }
+
+        .btn-secondary {
+          background: var(--secondary);
+          color: white;
+        }
+
+        .btn-secondary:hover {
+          background: #e8841a;
+        }
+
+        .btn-full {
+          width: 100%;
+        }
+
+        .btn-large {
+          padding: 1.25rem 3rem;
+          font-size: 1.25rem;
+        }
+
+        /* Section Styles */
+        .section {
+          padding: 4rem 0;
+        }
+
+        @media (min-width: 768px) {
+          .section {
+            padding: 6rem 0;
+          }
+        }
+
+        .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 1rem;
+        }
+
+        @media (min-width: 768px) {
+          .container {
+            padding: 0 2rem;
+          }
+        }
+
+        .section-header {
+          text-align: center;
+          margin-bottom: 3rem;
+        }
+
+        @media (min-width: 768px) {
+          .section-header {
+            margin-bottom: 4rem;
+          }
+        }
+
+        .section-title {
+          font-size: 1.875rem;
+          font-weight: 800;
+          margin-bottom: 1rem;
+        }
+
+        @media (min-width: 768px) {
+          .section-title {
+            font-size: 2.25rem;
+          }
+        }
+
+        @media (min-width: 1024px) {
+          .section-title {
+            font-size: 3rem;
+          }
+        }
+
+        .section-subtitle {
+          font-size: 1.125rem;
+          color: #6b7280;
+          max-width: 48rem;
+          margin: 0 auto;
+        }
+
+        @media (min-width: 768px) {
+          .section-subtitle {
+            font-size: 1.25rem;
+          }
+        }
+
+        /* Animation Styles */
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes float {
+          0%, 100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-20px);
+          }
+        }
+
+        @keyframes bounce {
+          0%, 20%, 53%, 80%, 100% {
+            transform: translate3d(0, 0, 0);
+          }
+          40%, 43% {
+            transform: translate3d(0, -30px, 0);
+          }
+          70% {
+            transform: translate3d(0, -15px, 0);
+          }
+          90% {
+            transform: translate3d(0, -4px, 0);
+          }
+        }
+
+        @keyframes ripple {
+          to {
+            transform: scale(4);
+            opacity: 0;
+          }
+        }
+
+        .animate-on-scroll {
+          opacity: 0;
+          transform: translateY(30px);
+          transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .animate-on-scroll.animate {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        /* Utility Classes */
+        .bg-gray-50 {
+          background-color: #f8f9fa;
+        }
+
+        .text-white {
+          color: white;
+        }
+
+        /* Product Card Styles */
+        .products-grid {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 3rem;
+        }
+
+        @media (min-width: 1024px) {
+          .products-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
+        .product-card {
+          background: white;
+          border-radius: 24px;
+          box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+          overflow: hidden;
+          transition: all var(--transition-normal);
+        }
+
+        .product-card:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-image {
+          height: 16rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          font-size: 4rem;
+          color: white;
+        }
+
+        @media (min-width: 768px) {
+          .product-image {
+            height: 20rem;
+            font-size: 6rem;
+          }
+        }
+
+        .product-image-primary {
+          background: linear-gradient(135deg, var(--primary), var(--secondary));
+        }
+
+        .product-image-secondary {
+          background: linear-gradient(135deg, var(--secondary), var(--accent));
+        }
+
+        .product-badge {
+          position: absolute;
+          top: 1rem;
+          right: 1rem;
+          background: rgba(255, 255, 255, 0.2);
+          backdrop-filter: blur(10px);
+          color: white;
+          padding: 0.5rem 1rem;
+          border-radius: 20px;
+          font-size: 0.875rem;
+          font-weight: 600;
+        }
+
+        .product-content {
+          padding: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+          .product-content {
+            padding: 2rem;
+          }
+        }
+
+        .product-title {
+          font-size: 1.5rem;
+          font-weight: 700;
+          margin-bottom: 1rem;
+          color: #111827;
+        }
+
+        @media (min-width: 1024px) {
+          .product-title {
+            font-size: 1.875rem;
+          }
+        }
+
+        .product-description {
+          color: #6b7280;
+          margin-bottom: 1.5rem;
+          line-height: 1.7;
+        }
+
+        .product-features {
+          list-style: none;
+          margin-bottom: 1.5rem;
+          padding: 0;
+        }
+
+        .product-features li {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+          margin-bottom: 0.75rem;
+          color: #374151;
+        }
+
+        .product-features i {
+          color: var(--whatsapp);
+          font-size: 1rem;
+        }
+
+        /* Footer Styles */
+        .footer {
+          background: #111827;
+          color: white;
+          padding: 3rem 0;
+        }
+
+        .footer-grid {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+          .footer-grid {
+            grid-template-columns: repeat(3, 1fr);
+          }
+        }
+
+        .footer-title {
+          font-size: 1.25rem;
+          font-weight: 700;
+          color: var(--primary);
+          margin-bottom: 1rem;
+        }
+
+        @media (min-width: 768px) {
+          .footer-title {
+            font-size: 1.5rem;
+          }
+        }
+
+        .footer-text {
+          color: #d1d5db;
+          margin-bottom: 1rem;
+          line-height: 1.7;
+        }
+
+        .social-links {
+          display: flex;
+          gap: 1rem;
+        }
+
+        .social-link {
+          width: 2.5rem;
+          height: 2.5rem;
+          background: #374151;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #d1d5db;
+          text-decoration: none;
+          transition: all var(--transition-normal);
+        }
+
+        .social-link:hover {
+          background: var(--primary);
+          color: white;
+        }
+
+        .footer-subtitle {
+          font-size: 1.125rem;
+          font-weight: 600;
+          margin-bottom: 1rem;
+        }
+
+        .footer-links {
+          list-style: none;
+          padding: 0;
+        }
+
+        .footer-links a {
+          color: #d1d5db;
+          text-decoration: none;
+          transition: color 0.15s ease;
+        }
+
+        .footer-links a:hover {
+          color: white;
+        }
+
+        .footer-links li,
+        .footer-info li {
+          margin-bottom: 0.5rem;
+        }
+
+        .footer-info {
+          list-style: none;
+          padding: 0;
+        }
+
+        .footer-info li {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          color: #d1d5db;
+          font-size: 0.875rem;
+        }
+
+        .footer-info i {
+          width: 1rem;
+        }
+
+        .footer-bottom {
+          border-top: 1px solid #374151;
+          margin-top: 2rem;
+          padding-top: 2rem;
+          text-align: center;
+          color: #d1d5db;
+        }
+
+        .footer-bottom p:first-child {
+          margin-bottom: 0.5rem;
+        }
+
+        .footer-bottom p:last-child {
+          font-size: 0.875rem;
+          color: #9ca3af;
+        }
+
+        /* Responsive Improvements */
+        @media (max-width: 480px) {
+          .hero-title-main {
+            font-size: 2.5rem;
+          }
+          
+          .hero-title-sub {
+            font-size: 2rem;
+          }
+          
+          .hero-description {
+            font-size: 1rem;
+          }
+          
+          .btn {
+            padding: 0.875rem 1.5rem;
+            font-size: 0.875rem;
+          }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay" class="mobile-overlay">
+        <div id="mobile-menu" class="mobile-menu">
+            <div class="mobile-menu-content">
+                <div class="mobile-menu-header">
+                    <span class="mobile-menu-title">🍗 Menu</span>
+                    <button id="close-mobile-menu" class="mobile-menu-close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <nav class="mobile-nav">
+                    <a href="#home" class="mobile-nav-link">
+                        <i class="fas fa-home"></i>Home
+                    </a>
+                    <a href="#products" class="mobile-nav-link">
+                        <i class="fas fa-shopping-basket"></i>Produk
+                    </a>
+                    <a href="#about" class="mobile-nav-link">
+                        <i class="fas fa-info-circle"></i>Tentang
+                    </a>
+                    <a href="#how-to-order" class="mobile-nav-link">
+                        <i class="fas fa-list-ol"></i>Cara Pesan
+                    </a>
+                    <a href="#contact" class="mobile-nav-link mobile-nav-whatsapp">
+                        <i class="fab fa-whatsapp"></i>Kontak
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-content">
+                <!-- Logo -->
+                <div class="nav-logo">
+                    <span class="logo-text">🍗 Urutan Ayam Bali</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="nav-desktop">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#products" class="nav-link">Produk</a>
+                    <a href="#about" class="nav-link">Tentang</a>
+                    <a href="#how-to-order" class="nav-link">Cara Pesan</a>
+                    <a href="#contact" class="nav-whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i>Kontak
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-button" id="mobile-menu-button">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <!-- Floating Elements -->
+        <div class="floating-elements">
+            <div class="floating-element" style="animation-delay: 0s;">🌟</div>
+            <div class="floating-element" style="animation-delay: 2s;">✨</div>
+            <div class="floating-element" style="animation-delay: 4s;">🍽️</div>
+        </div>
+        
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <h1 class="hero-title animate-on-scroll">
+                <span class="hero-title-main">Urutan Ayam Bali</span>
+                <span class="hero-title-sub">Enak & Praktis</span>
+            </h1>
+            <p class="hero-description animate-on-scroll" data-delay="0.3">
+                Jual urutan ayam Bali dan bakso ayam frozen food yang enak dan praktis. Ready stock, siap kirim ke seluruh Indonesia!
+            </p>
+            <div class="hero-buttons animate-on-scroll" data-delay="0.6">
+                <a href="#contact" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                    Pesan Sekarang
+                </a>
+                <a href="#products" class="btn btn-outline">
+                    <i class="fas fa-arrow-down"></i>
+                    Lihat Produk
+                </a>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section bg-gray-50" id="products">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title animate-on-scroll">
+                    Produk yang Kami Jual
+                </h2>
+                <p class="section-subtitle animate-on-scroll">
+                    Urutan ayam Bali dan bakso ayam frozen food siap saji
+                </p>
+            </div>
+            
+            <div class="products-grid">
+                <!-- Urutan Ayam Bali -->
+                <div class="product-card animate-on-scroll">
+                    <div class="product-image product-image-primary">
+                        <i class="fas fa-drumstick-bite"></i>
+                        <div class="product-badge">Best Seller</div>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Urutan Ayam Bali</h3>
+                        <p class="product-description">
+                            Sosis ayam khas Bali dengan rasa yang gurih dan enak. Cocok untuk digoreng atau dipanggang sebagai lauk praktis.
+                        </p>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check-circle"></i>Rasa Gurih dan Enak</li>
+                            <li><i class="fas fa-check-circle"></i>Praktis dan Tahan Lama</li>
+                            <li><i class="fas fa-check-circle"></i>Ready Stock</li>
+                            <li><i class="fas fa-check-circle"></i>Siap Goreng/Panggang</li>
+                        </ul>
+                        <a href="#how-to-order" class="btn btn-primary btn-full">
+                            <i class="fas fa-shopping-cart"></i>
+                            Pesan Sekarang
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Bakso Ayam -->
+                <div class="product-card animate-on-scroll">
+                    <div class="product-image product-image-secondary">
+                        <i class="fas fa-circle"></i>
+                        <div class="product-badge">Ready Stock</div>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Bakso Ayam</h3>
+                        <p class="product-description">
+                            Bakso ayam frozen yang lembut dan kenyal. Cocok untuk sup, mie ayam, atau dimakan langsung dengan saus.
+                        </p>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check-circle"></i>Tekstur Lembut & Kenyal</li>
+                            <li><i class="fas fa-check-circle"></i>Frozen Food Berkualitas</li>
+                            <li><i class="fas fa-check-circle"></i>Ready Stock</li>
+                            <li><i class="fas fa-check-circle"></i>Praktis & Bergizi</li>
+                        </ul>
+                        <a href="#how-to-order" class="btn btn-secondary btn-full">
+                            <i class="fas fa-shopping-cart"></i>
+                            Pesan Sekarang
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section bg-gray-50" id="contact">
+        <div class="container">
+            <div style="text-align: center; max-width: 56rem; margin: 0 auto;">
+                <h2 class="section-title animate-on-scroll">
+                    Pesan Sekarang
+                </h2>
+                <p class="section-subtitle animate-on-scroll" style="margin-bottom: 3rem;">
+                    Mau pesan urutan ayam Bali atau bakso ayam? Chat aja via WhatsApp, ready stock siap kirim! Bisa COD atau transfer, kirim via ojol.
+                </p>
+                
+                <div class="animate-on-scroll" style="margin-bottom: 3rem;">
+                    <a href="https://wa.me/6285739026117?text=Halo,%20mau%20tanya%20harga%20urutan%20ayam%20bali%20dan%20bakso%20ayam%20dong.%20Ready%20stock%20nggak?%20Bisa%20COD%20atau%20ojol?" 
+                       class="btn btn-whatsapp btn-large" 
+                       target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        Chat WhatsApp
+                    </a>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem;" class="animate-on-scroll">
+                    <div style="grid-template-columns: repeat(3, 1fr); display: grid; gap: 1.5rem;">
+                        <div style="background: white; padding: 1.5rem; border-radius: 16px; box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); text-align: center;">
+                            <i class="fas fa-phone" style="font-size: 1.875rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                            <h3 style="font-weight: 700; margin-bottom: 0.5rem; color: #111827;">WhatsApp</h3>
+                            <p style="color: #6b7280; font-size: 0.875rem;">+62 857-3902-6117</p>
+                        </div>
+                        <div style="background: white; padding: 1.5rem; border-radius: 16px; box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); text-align: center;">
+                            <i class="fas fa-clock" style="font-size: 1.875rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                            <h3 style="font-weight: 700; margin-bottom: 0.5rem; color: #111827;">Chat Kami</h3>
+                            <p style="color: #6b7280; font-size: 0.875rem;">09:00 - 21:00 WIB</p>
+                        </div>
+                        <div style="background: white; padding: 1.5rem; border-radius: 16px; box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); text-align: center;">
+                            <i class="fas fa-shipping-fast" style="font-size: 1.875rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                            <h3 style="font-weight: 700; margin-bottom: 0.5rem; color: #111827;">Pengiriman</h3>
+                            <p style="color: #6b7280; font-size: 0.875rem;">COD / Ojol / Kirim</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3 class="footer-title">🍗 Urutan Ayam Bali</h3>
+                    <p class="footer-text">
+                        Toko terpercaya urutan ayam Bali dan bakso ayam frozen food untuk keluarga Indonesia.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="footer-subtitle">Produk Kami</h4>
+                    <ul class="footer-links">
+                        <li><a href="#products">Urutan Ayam Bali</a></li>
+                        <li><a href="#products">Bakso Ayam</a></li>
+                        <li><a href="#contact">Tanya Harga</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-subtitle">Kontak</h4>
+                    <ul class="footer-info">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+62 857-3902-6117</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>urutanayambali@gmail.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>COD & Ojol Available</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Toko Urutan Ayam Bali. Semua Hak Dilindungi.</p>
+                <p>Frozen Food Enak dan Praktis</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // EMBEDDED JAVASCRIPT - In production, use external file
+        'use strict';
+
+        // Application State
+        const AppState = {
+            isMobileMenuOpen: false,
+            isMobile: window.innerWidth < 768
+        };
+
+        // DOM Elements Cache
+        const Elements = {};
+
+        // Utility Functions
+        const Utils = {
+            debounce(func, wait) {
+                let timeout;
+                return function executedFunction(...args) {
+                    const later = () => {
+                        clearTimeout(timeout);
+                        func(...args);
+                    };
+                    clearTimeout(timeout);
+                    timeout = setTimeout(later, wait);
+                };
+            },
+
+            throttle(func, limit) {
+                let inThrottle;
+                return function() {
+                    const args = arguments;
+                    const context = this;
+                    if (!inThrottle) {
+                        func.apply(context, args);
+                        inThrottle = true;
+                        setTimeout(() => inThrottle = false, limit);
+                    }
+                };
+            }
+        };
+
+        // Mobile Menu Controller
+        const MobileMenu = {
+            init() {
+                this.bindEvents();
+            },
+
+            bindEvents() {
+                Elements.mobileMenuButton?.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    this.open();
+                });
+
+                Elements.closeMobileMenu?.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    this.close();
+                });
+
+                Elements.mobileMenuOverlay?.addEventListener('click', (e) => {
+                    if (e.target === Elements.mobileMenuOverlay) {
+                        this.close();
+                    }
+                });
+
+                Elements.mobileNavLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        setTimeout(() => this.close(), 100);
+                    });
+                });
+
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && AppState.isMobileMenuOpen) {
+                        this.close();
+                    }
+                });
+            },
+
+            open() {
+                if (AppState.isMobileMenuOpen) return;
+
+                AppState.isMobileMenuOpen = true;
+                Elements.mobileMenuButton?.classList.add('active');
+                Elements.mobileMenuOverlay?.classList.add('active');
+                
+                document.body.style.overflow = 'hidden';
+                document.body.style.position = 'fixed';
+                document.body.style.width = '100%';
+                document.body.style.top = `-${window.scrollY}px`;
+                
+                requestAnimationFrame(() => {
+                    Elements.mobileMenu?.classList.add('active');
+                });
+
+                setTimeout(() => {
+                    Elements.closeMobileMenu?.focus();
+                }, 300);
+            },
+
+            close() {
+                if (!AppState.isMobileMenuOpen) return;
+
+                AppState.isMobileMenuOpen = false;
+                Elements.mobileMenuButton?.classList.remove('active');
+                Elements.mobileMenu?.classList.remove('active');
+                
+                const scrollY = document.body.style.top;
+                document.body.style.overflow = '';
+                document.body.style.position = '';
+                document.body.style.width = '';
+                document.body.style.top = '';
+                
+                if (scrollY) {
+                    window.scrollTo(0, parseInt(scrollY || '0') * -1);
+                }
+                
+                setTimeout(() => {
+                    Elements.mobileMenuOverlay?.classList.remove('active');
+                }, 300);
+
+                Elements.mobileMenuButton?.focus();
+            }
+        };
+
+        // Navigation Controller
+        const Navigation = {
+            init() {
+                this.bindEvents();
+            },
+
+            bindEvents() {
+                window.addEventListener('scroll', Utils.throttle(() => {
+                    this.handleScroll();
+                }, 16));
+
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', (e) => {
+                        this.handleAnchorClick(e);
+                    });
+                });
+            },
+
+            handleScroll() {
+                const currentScrollY = window.pageYOffset;
+                
+                if (currentScrollY > 50) {
+                    Elements.navbar?.classList.add('scrolled');
+                } else {
+                    Elements.navbar?.classList.remove('scrolled');
+                }
+
+                ScrollAnimations.checkAnimations();
+            },
+
+            handleAnchorClick(e) {
+                e.preventDefault();
+                
+                const targetId = e.currentTarget.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (!targetElement) return;
+
+                const navbarHeight = Elements.navbar?.offsetHeight || 0;
+                const targetPosition = targetElement.offsetTop - navbarHeight - 20;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        };
+
+        // Scroll Animations Controller
+        const ScrollAnimations = {
+            init() {
+                this.setupIntersectionObserver();
+                this.bindAnimationElements();
+            },
+
+            setupIntersectionObserver() {
+                const threshold = AppState.isMobile ? 0.05 : 0.1;
+                const rootMargin = AppState.isMobile ? '0px 0px -20px 0px' : '0px 0px -50px 0px';
+
+                this.observer = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            this.animateElement(entry.target);
+                            this.observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold, rootMargin });
+            },
+
+            bindAnimationElements() {
+                const elements = document.querySelectorAll('.animate-on-scroll');
+                
+                elements.forEach((element, index) => {
+                    element.style.opacity = '0';
+                    element.style.transform = 'translateY(30px)';
+                    
+                    const delay = element.dataset.delay || (index * 0.1);
+                    element.dataset.animationDelay = delay;
+                    
+                    this.observer.observe(element);
+                });
+            },
+
+            animateElement(element) {
+                const delay = parseFloat(element.dataset.animationDelay || 0) * 1000;
+                
+                setTimeout(() => {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                    element.style.transition = 'all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+                    element.classList.add('animate');
+                }, delay);
+            },
+
+            checkAnimations() {
+                if (this.observer) return;
+                
+                document.querySelectorAll('.animate-on-scroll').forEach(element => {
+                    if (!element.classList.contains('animate')) {
+                        const rect = element.getBoundingClientRect();
+                        const windowHeight = window.innerHeight;
+                        
+                        if (rect.top <= windowHeight * 0.9 && rect.bottom >= windowHeight * 0.1) {
+                            this.animateElement(element);
+                        }
+                    }
+                });
+            }
+        };
+
+        // Button Effects Controller
+        const ButtonEffects = {
+            init() {
+                this.bindClickEffects();
+            },
+
+            bindClickEffects() {
+                const buttons = document.querySelectorAll('.btn, .mobile-nav-link, .nav-link');
+                
+                buttons.forEach(button => {
+                    button.addEventListener('click', (e) => {
+                        this.createRippleEffect(e);
+                        this.addClickFeedback(button);
+                    });
+                });
+            },
+
+            createRippleEffect(e) {
+                const button = e.currentTarget;
+                const existingRipple = button.querySelector('.ripple');
+                if (existingRipple) existingRipple.remove();
+                
+                const ripple = document.createElement('span');
+                const rect = button.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                
+                Object.assign(ripple.style, {
+                    position: 'absolute',
+                    borderRadius: '50%',
+                    background: 'rgba(255, 255, 255, 0.3)',
+                    transform: 'scale(0)',
+                    animation: 'ripple 0.6s linear',
+                    left: x + 'px',
+                    top: y + 'px',
+                    width: size + 'px',
+                    height: size + 'px',
+                    pointerEvents: 'none',
+                    zIndex: '1000'
+                });
+                
+                ripple.classList.add('ripple');
+                
+                if (getComputedStyle(button).position === 'static') {
+                    button.style.position = 'relative';
+                }
+                button.style.overflow = 'hidden';
+                
+                button.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            },
+
+            addClickFeedback(element) {
+                element.style.transform = 'scale(0.98)';
+                
+                setTimeout(() => {
+                    element.style.transform = '';
+                }, 150);
+
+                if ('vibrate' in navigator && AppState.isMobile) {
+                    navigator.vibrate(50);
+                }
+            }
+        };
+
+        // Main Application
+        const App = {
+            init() {
+                if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', () => this.start());
+                } else {
+                    this.start();
+                }
+            },
+
+            start() {
+                this.cacheElements();
+                this.initializeModules();
+                
+                console.log('🍗 Urutan Ayam Bali website loaded successfully!');
+            },
+
+            cacheElements() {
+                Elements.navbar = document.getElementById('navbar');
+                Elements.mobileMenuButton = document.getElementById('mobile-menu-button');
+                Elements.mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+                Elements.mobileMenu = document.getElementById('mobile-menu');
+                Elements.closeMobileMenu = document.getElementById('close-mobile-menu');
+                Elements.mobileNavLinks = Array.from(document.querySelectorAll('.mobile-nav-link'));
+            },
+
+            initializeModules() {
+                const modules = [Navigation, MobileMenu, ScrollAnimations, ButtonEffects];
+                
+                modules.forEach(module => {
+                    try {
+                        module.init();
+                    } catch (error) {
+                        console.error(`Failed to initialize module:`, error);
+                    }
+                });
+            }
+        };
+
+        // Update mobile state on resize
+        window.addEventListener('resize', Utils.debounce(() => {
+            AppState.isMobile = window.innerWidth < 768;
+        }, 250));
+
+        // Initialize app
+        App.init();
+    </script>
+</body>
+</html>
